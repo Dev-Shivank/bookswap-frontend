@@ -136,8 +136,7 @@ const Contact = () => {
 
                   <Button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
-                  >
+className="bg-gradient-to-r from-amber-600 via-yellow-600 to-amber-700 hover:from-amber-700 hover:via-yellow-700 hover:to-amber-800 text-white font-semibold px-6 py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"                  >
                     <Send className="mr-2 h-4 w-4" />
                     Send Message
                   </Button>
@@ -169,8 +168,8 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">Phone</h3>
-                      <p className="text-gray-600">+1 (555) 123-4567</p>
-                      <p className="text-sm text-gray-500">Mon-Fri, 9AM-5PM PST</p>
+                      <p className="text-gray-600">+91 9219743218</p>
+                      <p className="text-sm text-gray-500">Mon-Sat, 9AM-5PM </p>
                     </div>
                   </div>
 
@@ -180,8 +179,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">Location</h3>
-                      <p className="text-gray-600">San Francisco, CA</p>
-                      <p className="text-sm text-gray-500">Remote-friendly team</p>
+                      <p className="text-gray-600">Indira Nagar, Munshipuliya </p>
                     </div>
                   </div>
                 </div>
@@ -222,28 +220,7 @@ const Contact = () => {
                 </p>
               </div>
 
-              {/* Sponsorship Information */}
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 border border-blue-200">
-                <h2 className="text-2xl font-bold mb-4">Sponsorship Opportunities</h2>
-                <p className="text-gray-600 mb-4">
-                  Partner with us to reach our engaged audience of 50,000+ monthly listeners.
-                </p>
-
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-600">50K+</div>
-                    <div className="text-sm text-gray-500">Monthly Listeners</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-600">25+</div>
-                    <div className="text-sm text-gray-500">Countries</div>
-                  </div>
-                </div>
-
-                <p className="text-sm text-gray-500">
-                  Contact us for our media kit and sponsorship packages.
-                </p>
-              </div>
+             
             </div>
           </div>
         </div>

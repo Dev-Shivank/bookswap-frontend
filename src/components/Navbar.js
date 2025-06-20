@@ -1,8 +1,7 @@
-
-import { useState, useRef } from "react"
-import { Link, useLocation } from "react-router-dom"
-import { Menu, X, ChevronDown, Mic } from "lucide-react"
-import Button from "./ui/Button"
+import { useState, useRef } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, ChevronDown, Mic } from "lucide-react";
+import Button from "./ui/Button";
 
 const categories = [
   { name: "Entertainment", href: "/category/entertainment" },
@@ -11,28 +10,27 @@ const categories = [
   { name: "Business", href: "/category/business" },
   { name: "Health", href: "/category/health" },
   { name: "Spirituality", href: "/category/spirituality" },
-]
-
+];
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [showDropdown, setShowDropdown] = useState(false)
-  const location = useLocation()
+  const [isOpen, setIsOpen] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
+  const location = useLocation();
 
-  const isActive = (path) => location.pathname === path
+  const isActive = (path) => location.pathname === path;
 
-  const dropdownTimer = useRef(null)
+  const dropdownTimer = useRef(null);
 
   const handleMouseEnter = () => {
-    clearTimeout(dropdownTimer.current)
-    setShowDropdown(true)
-  }
+    clearTimeout(dropdownTimer.current);
+    setShowDropdown(true);
+  };
 
   const handleMouseLeave = () => {
     dropdownTimer.current = setTimeout(() => {
-      setShowDropdown(false)
-    }, 150)
-  }
+      setShowDropdown(false);
+    }, 150);
+  };
 
   return (
     <nav className="bg-gradient-to-r from-amber-50 via-cream-50 to-yellow-50 text-amber-900 shadow-lg backdrop-blur-md sticky top-0 z-50 border-b border-amber-200/30">
@@ -52,7 +50,9 @@ const Navbar = () => {
               <span className="text-2xl font-serif font-bold bg-gradient-to-r from-amber-700 via-yellow-600 to-amber-800 bg-clip-text text-transparent">
                 The Célèbre Show
               </span>
-              <p className="text-xs text-amber-600 font-medium tracking-wider uppercase">Podcast Experience</p>
+              <p className="text-xs text-amber-600 font-medium tracking-wider uppercase">
+                Podcast Experience
+              </p>
             </div>
           </Link>
 
@@ -70,11 +70,17 @@ const Navbar = () => {
             </Link>
 
             {/* Podcasts Dropdown */}
-            <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <div
+              className="relative"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
               <button className="flex items-center space-x-1 font-medium text-amber-800 hover:text-amber-700 transition-all duration-300 group">
                 <span>Podcasts</span>
                 <ChevronDown
-                  className={`h-4 w-4 transition-transform duration-300 ${showDropdown ? "rotate-180" : ""}`}
+                  className={`h-4 w-4 transition-transform duration-300 ${
+                    showDropdown ? "rotate-180" : ""
+                  }`}
                 />
               </button>
 
@@ -137,12 +143,18 @@ const Navbar = () => {
 
           {/* Right Side Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button className="bg-gradient-to-r from-amber-600 via-yellow-600 to-amber-700 hover:from-amber-700 hover:via-yellow-700 hover:to-amber-800 text-white font-semibold px-6 py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-              <span className="flex items-center space-x-2">
-                <Mic className="h-4 w-4" />
-                <span>Be Our Guest</span>
-              </span>
-            </Button>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSciyidkmYwwolkrc4Ye9hvJlv_i21o-i4uzbxPQHzvpo1Bvyg/viewform?usp=dialog "
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-gradient-to-r from-amber-600 via-yellow-600 to-amber-700 hover:from-amber-700 hover:via-yellow-700 hover:to-amber-800 text-white font-semibold px-6 py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <span className="flex items-center space-x-2">
+                  <Mic className="h-4 w-4" />
+                  <span>Be Our Guest</span>
+                </span>
+              </Button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -216,7 +228,7 @@ const Navbar = () => {
         )}
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
