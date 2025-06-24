@@ -10,32 +10,33 @@ const categoryInfo = {
   technology: {
     title: "Technology",
     description: "Explore the latest innovations, AI breakthroughs, and tech trends shaping our future.",
-    color: "from-blue-600 to-cyan-600",
+    color: "from-amber-700 via-yellow-600"
+,
   },
   business: {
     title: "Business",
     description: "Entrepreneurship, leadership insights, and success stories from industry leaders.",
-    color: "from-green-600 to-emerald-600",
+    color: "from-amber-700 via-yellow-600"
   },
   health: {
     title: "Health & Wellness",
     description: "Mental health, fitness, nutrition, and holistic approaches to well-being.",
-    color: "from-pink-600 to-rose-600",
+    color: "from-amber-700 via-yellow-600"
   },
   sports: {
     title: "Sports",
     description: "Athletic excellence, coaching wisdom, and inspiring stories from the world of sports.",
-    color: "from-orange-600 to-red-600",
+    color: "from-amber-700 via-yellow-600"
   },
   entertainment: {
     title: "Entertainment",
     description: "Creative arts, storytelling, and conversations with entertainers and artists.",
-    color: "from-purple-600 to-violet-600",
+    color: "from-amber-700 via-yellow-600"
   },
   spirituality: {
     title: "Spirituality",
     description: "Inner growth, mindfulness, and wisdom from spiritual teachers and practitioners.",
-    color: "from-indigo-600 to-purple-600",
+    color:"from-amber-700 via-yellow-600"
   },
 };
 

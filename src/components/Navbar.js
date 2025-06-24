@@ -166,7 +166,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+
         {isOpen && (
           <div className="md:hidden py-6 border-t border-amber-200/50 bg-gradient-to-b from-amber-50/80 to-yellow-50/80 backdrop-blur-sm rounded-b-xl">
             <div className="flex flex-col space-y-4">

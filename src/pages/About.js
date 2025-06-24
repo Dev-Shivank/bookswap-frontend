@@ -15,7 +15,7 @@ const About = () => {
   return (
     <div className="min-h-screen">
 
-      <PodcastCardTest/>
+      {/* <PodcastCardTest/> */}
 
       
       {/* Hero Section */}
