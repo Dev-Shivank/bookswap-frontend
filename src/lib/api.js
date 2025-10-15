@@ -2,7 +2,7 @@ import axios from 'axios'
 
 
 // rplc base url with  backend
-export const BASE_URL = 'REPLACE_WITH_YOUR_BACKEND_URL'
+export const BASE_URL = 'http://localhost:5000/api'
 
 
 const api = axios.create({
