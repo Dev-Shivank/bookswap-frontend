@@ -1,6 +1,6 @@
 import React from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
-// import Home from './pages/Home'
+import Home from './pages/Home'
 import Login from './pages/auth/login'
 import Signup from './pages/auth/Signup'
 import Dashboard from './pages/Dashboard'
@@ -24,7 +24,7 @@ return (
 <Navbar />
 <main className="max-w-6xl mx-auto p-4">
 <Routes>
-{/* <Route path="/" element={<Home/>} /> */}
+<Route path="/" element={<Home/>} />
 <Route path="/login" element={<Login/>} />
 <Route path="/signup" element={<Signup/>} />
 
