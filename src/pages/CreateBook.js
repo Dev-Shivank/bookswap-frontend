@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import api from '../lib/api'; 
 import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function CreateBook() {
   const [title, setTitle] = useState('');
@@ -22,19 +24,25 @@ export default function CreateBook() {
       fd.append('condition', condition);
       if (image) fd.append('image', image);
 
-      // Send POST request to backend
-      const res = await api.post('/books', fd, {
+      await api.post('/books', fd, {
         headers: {
           'Content-Type': 'multipart/form-data',
-          Authorization: `Bearer ${localStorage.getItem('token')}` // send JWT
+          Authorization: `Bearer ${localStorage.getItem('token')}`
         }
       });
 
-      alert('Book posted successfully!');
-      nav('/dashboard'); // redirect after success
+      toast.success('Book posted successfully!', {
+        position: "top-right",
+        autoClose: 3000,
+      });
+
+      nav('/dashboard'); 
     } catch (err) {
       console.error(err);
-      alert('Failed to post book');
+      toast.error('Failed to post book. Please try again.', {
+        position: "top-right",
+        autoClose: 4000,
+      });
     } finally {
       setLoading(false);
     }
@@ -42,6 +50,7 @@ export default function CreateBook() {
 
   return (
     <div className="max-w-xl mx-auto bg-white p-6 rounded shadow mt-8">
+      <ToastContainer /> {/* Must include this */}
       <h2 className="text-2xl font-bold mb-4">Post a Book</h2>
       <form onSubmit={submit} className="space-y-3">
         <input
@@ -78,7 +87,7 @@ export default function CreateBook() {
           />
         </div>
         <button
-          className="w-full bg-blue-600 text-white p-2 rounded"
+          className="w-full bg-blue-600 text-white p-2 rounded disabled:opacity-50"
           disabled={loading}
         >
           {loading ? 'Posting...' : 'Post Book'}
