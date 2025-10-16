@@ -10,6 +10,9 @@ import BookDetails from './pages/BookDetails'
 import { useAuth } from './lib/auth'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import About from './pages/About'
+import Services from './pages/Services'
+import Contact from './pages/Contact'
 
 
 function PrivateRoute({ children }) {
@@ -29,6 +32,9 @@ return (
 <Route path="/login" element={<Login/>} />
 <Route path="/signup" element={<Signup/>} />
 
+<Route path="/about" element={<About/>} />
+<Route path="/services" element={<Services/>} />
+<Route path="/contact" element={<Contact/>} />
 
 <Route path="/dashboard" element={<PrivateRoute><Dashboard/></PrivateRoute>} />
 <Route path="/books/create" element={<PrivateRoute><CreateBook/></PrivateRoute>} />
