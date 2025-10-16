@@ -22,7 +22,7 @@ return (
 </>
 ) : (
 <>
-<Link to="/login" className="text-sm">Login</Link>
+{/* <Link to="/login" className="text-sm">Login</Link> */}
 <Link to="/signup" className="px-3 py-1 bg-blue-600 text-white rounded text-sm">Sign up</Link>
 </>
 )}
