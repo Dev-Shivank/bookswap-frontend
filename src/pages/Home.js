@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../components/Footer';
 
 const books = [
   {
@@ -30,7 +31,7 @@ const Home = () => {
       {/* Hero Section - reminiscent of old bookstore banners */}
       <section className="bg-yellow-100 py-20 px-5 text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-4 text-gray-800">
-          Welcome to Your Book Haven
+          Welcome to Your Book Swap
         </h1>
         <p className="text-lg md:text-2xl mb-8 text-gray-700">
           Keeping the charm of old bookstores, now online!
@@ -90,10 +91,7 @@ const Home = () => {
           </p>
         </div>
       </section>
-
-      <footer className="bg-gray-800 text-yellow-100 py-8 text-center">
-        <p>© 2025 Your Old Bookstore. Preserving the classics online.</p>
-      </footer>
+<Footer/>
     </div>
   );
 };
