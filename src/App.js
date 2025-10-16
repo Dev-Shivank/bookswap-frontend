@@ -9,6 +9,7 @@ import Requests from './pages/Requests'
 import BookDetails from './pages/BookDetails'
 import { useAuth } from './lib/auth'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 
 function PrivateRoute({ children }) {
@@ -38,6 +39,7 @@ return (
 <Route path="*" element={<div className="p-8">Page not found</div>} />
 </Routes>
 </main>
+<Footer/>
 </div>
 )
 }

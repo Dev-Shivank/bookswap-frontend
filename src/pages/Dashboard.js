@@ -5,6 +5,7 @@ import BookCard from '../components/BookCard';
 import { useAuth } from '../lib/auth';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Footer from '../components/Footer';
 
 export default function Dashboard() {
   const [myBooks, setMyBooks] = useState([]);
@@ -53,5 +54,6 @@ export default function Dashboard() {
         <Link to="/requests" className="text-blue-600">Manage requests</Link>
       </div>
     </div>
+    
   );
 }

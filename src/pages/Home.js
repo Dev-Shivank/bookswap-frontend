@@ -91,7 +91,7 @@ const Home = () => {
           </p>
         </div>
       </section>
-<Footer/>
+{/* <Footer/> */}
     </div>
   );
 };
